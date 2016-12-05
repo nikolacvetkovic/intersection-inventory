@@ -4,6 +4,7 @@ Goals:
 
 1. add spring security
 2. split "insert" and "update" in two separate Controllers
-3. optimize JSP pages
-4. export to .xslx
-5. ...
+4. implement DAO pattern with Generic classes
+5. optimize JSP pages
+6. export to .xslx
+7. ...

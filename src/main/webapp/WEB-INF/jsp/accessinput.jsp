@@ -1,6 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@include file="topinput.jsp" %>
+<%@include file="topNoScroll.jsp" %>
+<%@include file="sideMenu.jsp" %>
                     
                             <form class="login-page" action="accessinput" method="post">
                                 <div class="login-header margin-bottom-30">
@@ -38,4 +39,4 @@
             </div>
         </div>
         <!-- === END CONTENT === -->
-        <%@include file="bottominput.jsp" %>
+        <%@include file="bottom.jsp" %>

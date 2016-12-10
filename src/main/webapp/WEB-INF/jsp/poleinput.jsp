@@ -1,12 +1,14 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@include file="topinput.jsp" %>
+<%@include file="topNoScroll.jsp" %>
+<%@include file="sideMenu.jsp" %>
+
                             <form class="login-page" action="poleinput" method="post">
                                 <div class="login-header margin-bottom-30">
                                     
                                 </div>
                                 <div class="input-group margin-bottom-20">
-                                    Raskrsnica: <select class="form-unos" name="idInt" onchange="if(this.value!=-1) window.location='./poleinput?idInt='+this.value">
+                                    Raskrsnica: <select class="form-unos" name="idInt" onchange="if(this.value!==-1) window.location='./poleinput?idInt='+this.value">
                                         <option value="-1">Odaberi raskrsnicu</option>
                                         <c:forEach items="${intersections}" var="intersection">
                                             <option <c:if test="${intersection.id==selectedIntersection.id}">selected</c:if> value="${intersection.id}">[&nbsp;${intersection.symbol}&nbsp;] &nbsp; ${intersection.title}</option>
@@ -59,4 +61,4 @@
             </div>
         </div>
         <!-- === END CONTENT === -->
-        <%@include file="bottominput.jsp" %>
+        <%@include file="bottom.jsp" %>

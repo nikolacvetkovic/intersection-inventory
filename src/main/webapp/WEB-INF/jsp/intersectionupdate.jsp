@@ -1,13 +1,14 @@
-<%@include file="topupdate.jsp" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="topNoScroll.jsp" %>
+<%@include file="sideMenu.jsp" %>
 
                             <form class="login-page" action="intersectionupdate" method="post" enctype="multipart/form-data">
                                 <div class="login-header margin-bottom-30">
                                     
                                 </div>
                                 <div class="input-group margin-bottom-20">
-                                    Raskrsnica: <select class="form-unos" name="idInt" onchange="if(this.value!=-1) window.location='./intersectionupdate?idInt='+this.value">
+                                    Raskrsnica: <select class="form-unos" name="idInt" onchange="if(this.value!==-1) window.location='./intersectionupdate?idInt='+this.value">
                                         <option value="-1">Odaberi raskrsnicu</option>
                                         <c:forEach items="${intersections}" var="intersection">
                                             <option <c:if test="${intersection.id==selectedIntersection.id}">selected</c:if> value="${intersection.id}">[&nbsp;${intersection.symbol}&nbsp;] &nbsp; ${intersection.title}</option>
@@ -29,7 +30,6 @@
                                 <div>
                                     Dispozicija: <input type="file" name="pdf" />
                                 </div>
-                               
                                 <div class="row">
                                     <div class="col-md-6">
                                         
@@ -38,9 +38,7 @@
                                         <input class="btn btn-primary pull-right" type="submit" value="Unesi"/>
                                     </div>
                                 </div>
-                                
                             </form>
-                        
                         <!-- End Main Content -->
                     </div>
                     <!-- End Main Column -->
@@ -48,4 +46,4 @@
             </div>
         </div>
         <!-- === END CONTENT === -->
-        <%@include file="bottominput.jsp" %>
+        <%@include file="bottom.jsp" %>

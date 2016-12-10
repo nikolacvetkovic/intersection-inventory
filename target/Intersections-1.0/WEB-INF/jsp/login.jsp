@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="top1.jsp" %>
+<%@include file="topProba.jsp" %>
         <!-- === BEGIN CONTENT === -->
         <div id="content">
             <div class="container background-white">
@@ -40,4 +40,4 @@
             </div>
         </div>
         <!-- === END CONTENT === -->
-        <%@include file="bottom1.jsp" %>
+        <%@include file="bottom.jsp" %>

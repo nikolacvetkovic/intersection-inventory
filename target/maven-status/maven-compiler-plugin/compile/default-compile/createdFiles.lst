@@ -1,9 +1,12 @@
+com\intersections\controller\UseExportController.class
 com\intersections\model\DetectorDao.class
 com\intersections\model\SignalHead.class
+com\intersections\controller\UpdateController.class
 com\intersections\model\Access.class
 com\intersections\model\TrafficSignalControllerDao.class
 com\intersections\model\Detector.class
 com\intersections\model\PedestrianPushButtonDao.class
+com\intersections\controller\InsertController.class
 com\intersections\model\PedestrianPushButton.class
 com\intersections\model\SignalHeadDao.class
 com\intersections\model\PedestrianDisplay.class

@@ -10,7 +10,7 @@
         <!-- Title -->
         <title>Baza semaforizovanih raskrsnica</title>
         <!-- Meta -->
-        <base href="/intersections/" />
+        
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="">
         <meta name="author" content="">
@@ -100,7 +100,7 @@
                                     <span class="fa-copy ">Ažuriranje</span>
                                     <ul>
                                         <li>
-                                            <a href="intersectionupdate">Raskrsnica</a>
+                                            <a href="update/intersectionupdate">Raskrsnica</a>
                                         </li>
                                         <li>
                                             <a href="trafficsignalcontrollerupdate">Upravljački uređaj</a>

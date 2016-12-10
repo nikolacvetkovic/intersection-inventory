@@ -1,21 +1,6 @@
 package com.intersections.controller;
 
-import com.intersections.model.Access;
-import com.intersections.model.AccessDao;
-import com.intersections.model.Detector;
-import com.intersections.model.DetectorDao;
-import com.intersections.model.Intersection;
-import com.intersections.model.IntersectionDao;
-import com.intersections.model.PedestrianDisplay;
-import com.intersections.model.PedestrianDisplayDao;
-import com.intersections.model.PedestrianPushButton;
-import com.intersections.model.PedestrianPushButtonDao;
-import com.intersections.model.Pole;
-import com.intersections.model.PoleDao;
-import com.intersections.model.SignalHead;
-import com.intersections.model.SignalHeadDao;
-import com.intersections.model.TrafficSignalController;
-import com.intersections.model.TrafficSignalControllerDao;
+import com.intersections.model.*;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -53,7 +38,7 @@ public class SiteController {
     @RequestMapping("/")
     public String index(){
             
-        return "index";
+         return "index";
     }
     @RequestMapping(value = "/intersectioninput", method = RequestMethod.GET)
     public String intersectionInputPage(ModelMap model){

@@ -100,7 +100,7 @@
                                     <span class="fa-copy ">Ažuriranje</span>
                                     <ul>
                                         <li>
-                                            <a href="update/intersectionupdate">Raskrsnica</a>
+                                            <a href="intersectionupdate">Raskrsnica</a>
                                         </li>
                                         <li>
                                             <a href="trafficsignalcontrollerupdate">Upravljački uređaj</a>

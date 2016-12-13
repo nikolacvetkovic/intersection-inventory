@@ -113,4 +113,4 @@
             </div>
         </div>
         <!-- === END CONTENT === -->
-        <%@include file="bottom1.jsp" %>
+        <%@include file="bottom.jsp" %>

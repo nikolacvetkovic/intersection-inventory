@@ -3,7 +3,7 @@
 <%@include file="topNoScroll.jsp" %>
 <%@include file="sideMenu.jsp" %>
 
-                            <form class="login-page" action="pedestrianpushbuttonupdate" method="post">
+                            <form class="login-page" action="pedestrianpushbutton" method="post">
                                 <div class="login-header margin-bottom-30">
                                     
                                 </div>
@@ -16,7 +16,7 @@
                                                 </select>
                                 </div>
                                 <div class="input-group margin-bottom-20">
-                                    Stub: <select class="form-unos" name="idPol" onchange="if(this.value!==-1) window.location='./pedestrianpushbuttonupdate?idPol='+this.value+'&idInt=${selectedIntersection.id}'">
+                                    Stub: <select class="form-unos" name="idPol" onchange="if(this.value!==-1) window.location='./pedestrianpushbutton?idPol='+this.value+'&idInt=${selectedIntersection.id}'">
                                         <option value="-1">Odaberi stub</option>
                                         <c:forEach items="${poles}" var="pole">
                                             <option <c:if test="${pole.id==selectedPole.id}">selected</c:if> value="${pole.id}">&nbsp;${pole.symbol}&nbsp;</option>
@@ -24,7 +24,7 @@
                                                 </select>
                                 </div>
                                 <div class="input-group margin-bottom-20">
-                                    Taster: <select class="form-unos" name="idPed" onchange="if(this.value!==-1) window.location='./pedestrianpushbuttonupdate?idPed='+this.value+'&idInt=${selectedIntersection.id}&idPol=${selectedPole.id}'">
+                                    Taster: <select class="form-unos" name="idPed" onchange="if(this.value!==-1) window.location='./pedestrianpushbutton?idPed='+this.value+'&idInt=${selectedIntersection.id}&idPol=${selectedPole.id}'">
                                         <option value="-1">Odaberi taster</option>
                                         <c:forEach items="${ppbs}" var="ppb">
                                             <option <c:if test="${ppb.id==selectedppb.id}">selected</c:if> value="${ppb.id}">&nbsp;${ppb.symbol}&nbsp;</option>

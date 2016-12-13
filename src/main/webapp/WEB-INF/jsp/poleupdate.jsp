@@ -3,12 +3,12 @@
 <%@include file="topNoScroll.jsp" %>
 <%@include file="sideMenu.jsp" %>
 
-                            <form class="login-page" action="poleupdate" method="post">
+                            <form class="login-page" action="pole" method="post">
                                 <div class="login-header margin-bottom-30">
                                     
                                 </div>
                                 <div class="input-group margin-bottom-20">
-                                    Raskrsnica: <select class="form-unos" name="idInt" onchange="if(this.value!==-1) window.location='./poleupdate?idInt='+this.value">
+                                    Raskrsnica: <select class="form-unos" name="idInt" onchange="if(this.value!==-1) window.location='./pole?idInt='+this.value">
                                         <option value="-1">Odaberi raskrsnicu</option>
                                         <c:forEach items="${intersections}" var="intersection">
                                             <option <c:if test="${intersection.id==selectedIntersection.id}">selected</c:if> value="${intersection.id}">[&nbsp;${intersection.symbol}&nbsp;] &nbsp; ${intersection.title}</option>
@@ -16,7 +16,7 @@
                                                 </select>
                                 </div>
                                 <div class="input-group margin-bottom-20">
-                                    Prilaz: <select class="form-unos" name="idAcc" onchange="if(this.value!==-1) window.location='./poleupdate?idAcc='+this.value+'&idInt=${selectedIntersection.id}'">
+                                    Prilaz: <select class="form-unos" name="idAcc" onchange="if(this.value!==-1) window.location='./pole?idAcc='+this.value+'&idInt=${selectedIntersection.id}'">
                                         <option value="-1">Odaberi prilaz</option>
                                         <c:forEach items="${accesses}" var="access">
                                             <option <c:if test="${access.id==selectedAccess.id}">selected</c:if> value="${access.id}">[&nbsp;${access.symbol}&nbsp;] &nbsp; ${access.title}</option>
@@ -24,7 +24,7 @@
                                                 </select>
                                 </div>
                                 <div class="input-group margin-bottom-20">
-                                    Stub: <select class="form-unos" name="idPol" onchange="if(this.value!==-1) window.location='./poleupdate?idPol='+this.value+'&idInt=${selectedIntersection.id}&idAcc=${selectedAccess.id}'">
+                                    Stub: <select class="form-unos" name="idPol" onchange="if(this.value!==-1) window.location='./pole?idPol='+this.value+'&idInt=${selectedIntersection.id}&idAcc=${selectedAccess.id}'">
                                         <option value="-1">Odaberi stub</option>
                                         <c:forEach items="${poles}" var="pole">
                                             <option <c:if test="${pole.id==selectedPole.id}">selected</c:if> value="${pole.id}">&nbsp;${pole.symbol}&nbsp;</option>

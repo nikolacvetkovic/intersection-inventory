@@ -49,7 +49,7 @@
     </bean>
     
     <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-    <property name="sessionFactory" ref="sessionFactory" />
+        <property name="sessionFactory" ref="sessionFactory" />
     </bean>
     
     <tx:annotation-driven transaction-manager="transactionManager" />
@@ -61,13 +61,13 @@
         </tx:attributes>
     </tx:advice>
     
-    <bean id="accessDao" class="com.intersections.model.AccessDao" />
-    <bean id="detectorDao" class="com.intersections.model.DetectorDao"/>
-    <bean id="intersectionDao" class="com.intersections.model.IntersectionDao" />
-    <bean id="pedestrianDisplayDao" class="com.intersections.model.PedestrianDisplayDao"/>
-    <bean id="pedestrianPushButtonDao" class="com.intersections.model.PedestrianPushButtonDao"/>
-    <bean id="poleDao" class="com.intersections.model.PoleDao"/>
-    <bean id="signalHeadDao" class="com.intersections.model.SignalHeadDao"/>
-    <bean id="trafficSignalControllerDao" class="com.intersections.model.TrafficSignalControllerDao"/>
+    <bean id="accessDao" class="com.intersections.model.dao.AccessDao" />
+    <bean id="detectorDao" class="com.intersections.model.dao.DetectorDao"/>
+    <bean id="intersectionDao" class="com.intersections.model.dao.IntersectionDao" />
+    <bean id="pedestrianDisplayDao" class="com.intersections.model.dao.PedestrianDisplayDao"/>
+    <bean id="pedestrianPushButtonDao" class="com.intersections.model.dao.PedestrianPushButtonDao"/>
+    <bean id="poleDao" class="com.intersections.model.dao.PoleDao"/>
+    <bean id="signalHeadDao" class="com.intersections.model.dao.SignalHeadDao"/>
+    <bean id="trafficSignalControllerDao" class="com.intersections.model.dao.TrafficSignalControllerDao"/>
     
 </beans>

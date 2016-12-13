@@ -91,7 +91,6 @@
             <!-- Modernizr -->
             <script  type="text/javascript" src="/assets/js/modernizr.custom.js"></script>
             <!-- End JS -->
-            ${pageScope.request.ContextPath}
     </body>
 </html>
 <!-- === END FOOTER === -->

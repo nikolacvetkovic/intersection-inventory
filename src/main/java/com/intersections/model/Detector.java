@@ -114,6 +114,23 @@ public class Detector implements Serializable {
     public void setIntersection(Intersection intersection) {
         this.intersection = intersection;
     }
+    
+    public BigDecimal getxDimension() {
+        return xDimension;
+    }
+
+    
+    public void setxDimension(BigDecimal xDimension) {
+        this.xDimension = xDimension;
+    }
+
+    public BigDecimal getyDimension() {
+        return yDimension;
+    }
+
+    public void setyDimension(BigDecimal yDimension) {
+        this.yDimension = yDimension;
+    }
 
     @Override
     public int hashCode() {
@@ -140,32 +157,4 @@ public class Detector implements Serializable {
         return "com.intersections.model.Detector[ id=" + id + " ]";
     }
 
-    /**
-     * @return the xDimension
-     */
-    public BigDecimal getxDimension() {
-        return xDimension;
-    }
-
-    /**
-     * @param xDimension the xDimension to set
-     */
-    public void setxDimension(BigDecimal xDimension) {
-        this.xDimension = xDimension;
-    }
-
-    /**
-     * @return the yDimension
-     */
-    public BigDecimal getyDimension() {
-        return yDimension;
-    }
-
-    /**
-     * @param yDimension the yDimension to set
-     */
-    public void setyDimension(BigDecimal yDimension) {
-        this.yDimension = yDimension;
-    }
-    
 }

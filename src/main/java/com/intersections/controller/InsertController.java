@@ -1,5 +1,13 @@
 package com.intersections.controller;
 
+import com.intersections.model.dao.AccessDao;
+import com.intersections.model.dao.PedestrianDisplayDao;
+import com.intersections.model.dao.PoleDao;
+import com.intersections.model.dao.IntersectionDao;
+import com.intersections.model.dao.PedestrianPushButtonDao;
+import com.intersections.model.dao.SignalHeadDao;
+import com.intersections.model.dao.DetectorDao;
+import com.intersections.model.dao.TrafficSignalControllerDao;
 import com.intersections.model.*;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -23,6 +31,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Controller
 @RequestMapping(value = "/insert")
 public class InsertController {
+    
     
     @Autowired
     IntersectionDao intersectionDao;
@@ -77,7 +86,7 @@ public class InsertController {
         intersectionDao.insert(i);
         
         return "intersectioninput";
-    }
+    }     
     @RequestMapping(value = "/trafficsignalcontroller", method = RequestMethod.GET)
     public String trafficSignalControllerInputPage(ModelMap model){
         String naslov = "Unos upravljačkog uređaja";
@@ -218,7 +227,7 @@ public class InsertController {
         
         return "accessinput";
     }
-    @RequestMapping(value = "/accessinput", method = RequestMethod.POST)
+    @RequestMapping(value = "/access", method = RequestMethod.POST)
     public String accessInput(
             @RequestParam Integer id,
             @RequestParam String symbol,

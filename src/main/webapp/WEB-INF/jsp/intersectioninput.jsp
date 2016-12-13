@@ -2,7 +2,7 @@
 <%@include file="topNoScroll.jsp" %>
 <%@include file="sideMenu.jsp" %>
 
-                            <form class="login-page" action="intersectioninput" method="post" enctype="multipart/form-data">
+                            <form class="login-page" action="intersection" method="post" enctype="multipart/form-data">
                                 <div class="login-header margin-bottom-30">
                                     
                                 </div>

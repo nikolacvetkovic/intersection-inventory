@@ -3,7 +3,7 @@
 <%@include file="topNoScroll.jsp" %>
 <%@include file="sideMenu.jsp" %>
                     
-                            <form class="login-page" action="accessinput" method="post">
+                            <form class="login-page" action="access" method="post">
                                 <div class="login-header margin-bottom-30">
                                     
                                 </div>

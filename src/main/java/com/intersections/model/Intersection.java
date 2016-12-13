@@ -35,7 +35,6 @@ public class Intersection implements Serializable {
     @Size(max = 256)
     @Column(name = "title")
     private String title;
-    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "xcoordinate")
     private BigDecimal xcoordinate;
     @Column(name = "ycoordinate")

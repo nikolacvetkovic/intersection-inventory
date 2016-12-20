@@ -6,7 +6,7 @@ All HTML, CSS and JavaScript is from http://www.free-css.com/free-css-templates/
 
 Goals:
 
-1. add spring security
+1. add spring security (DONE)
 2. split "insert" and "update" in two separate Controllers (DONE)
 4. implement DAO pattern with Generic classes (DONE)
 5. optimize JSP pages (DONE)

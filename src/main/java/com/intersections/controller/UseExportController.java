@@ -1,13 +1,13 @@
 package com.intersections.controller;
 
-import com.intersections.model.dao.AccessDao;
-import com.intersections.model.dao.PedestrianDisplayDao;
-import com.intersections.model.dao.PoleDao;
-import com.intersections.model.dao.IntersectionDao;
-import com.intersections.model.dao.PedestrianPushButtonDao;
-import com.intersections.model.dao.SignalHeadDao;
-import com.intersections.model.dao.DetectorDao;
-import com.intersections.model.dao.TrafficSignalControllerDao;
+import com.intersections.dao.IntersectionDao;
+import com.intersections.dao.PedestrianPushButtonDao;
+import com.intersections.dao.AccessDao;
+import com.intersections.dao.TrafficSignalControllerDao;
+import com.intersections.dao.PoleDao;
+import com.intersections.dao.DetectorDao;
+import com.intersections.dao.PedestrianDisplayDao;
+import com.intersections.dao.SignalHeadDao;
 import com.intersections.model.*;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,11 +15,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-/**
- *
- * @author cvele
- */
 
 @Controller
 @RequestMapping(value = "use")

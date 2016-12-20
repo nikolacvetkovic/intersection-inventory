@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!-- === BEGIN HEADER === -->
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -107,7 +108,17 @@
                                     <a href="../use/search"><span class="fa-th ">Pregled</span></a>
                                 </li>
                                 <li>
-                                    <a href="/login"><span class="fa-font ">Odjava</span></a>
+                                    <sec:authorize access="isAnonymous()">
+                                        <a href="/login"><span class="fa-sign-in ">Prijavi se</span></a>
+                                    </sec:authorize>
+                                    <sec:authorize access="isAuthenticated()">
+                                        <div>
+                                        <form method="post" action="/logout">
+                                            <button id="taster"style="font-size:15px; padding: 14px; border: none; background-color: transparent;"><i class="fa-sign-out"></i> ODJAVI SE</button>
+                                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                                        </form>
+                                    </div>
+                                    </sec:authorize>
                                 </li>
                                 
                             </ul>

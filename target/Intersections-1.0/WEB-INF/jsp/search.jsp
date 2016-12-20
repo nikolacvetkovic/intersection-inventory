@@ -22,6 +22,7 @@
                                         <input class="btn btn-primary pull-right" type="submit" value="Potvrdi"/>
                                     </div>
                                 </div>
+                                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                             </form>
                         <!-- End Main Content -->
                     </div>

@@ -11,6 +11,6 @@ Goals:
 4. implement DAO pattern with Generic classes (DONE)
 5. optimize JSP pages (DONE)
 6. export data to .xlsx - Apache POI (DONE)
-7. add Ajax (checks user input in all forms then sents post request) 
+7. add Ajax (checks user input in all forms then sends post request) 
 8. add WebService
 9. ...

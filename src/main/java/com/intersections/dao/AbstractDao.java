@@ -72,12 +72,14 @@ public abstract class AbstractDao<T, I, A, P, ID extends Serializable> implement
     public void insert(T t) {
         Session session = sessionFactory.getCurrentSession();
         session.save(t);
+        session.flush();
     }
 
     @Override
     public void update(T t) {
         Session session = sessionFactory.getCurrentSession();
         session.update(t);
+        session.flush();
     }
     
 }

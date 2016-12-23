@@ -50,7 +50,7 @@ public class Intersection implements Serializable {
     private List<Detector> detectorList;
     @OneToMany(mappedBy = "intersection")
     private List<PedestrianDisplay> pedestrianDisplayList;
-    @OneToMany(mappedBy = "intersection",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "intersection",cascade = CascadeType.ALL)
     private List<Access> accessList;
     @OneToMany(mappedBy = "intersection")
     private List<SignalHead> signalHeadList;

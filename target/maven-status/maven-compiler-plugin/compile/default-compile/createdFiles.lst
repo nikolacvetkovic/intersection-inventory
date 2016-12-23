@@ -27,3 +27,4 @@ com\intersections\dao\DaoInterface.class
 com\intersections\dao\PedestrianDisplayDao.class
 com\intersections\model\Pole.class
 com\intersections\dao\UserInterface.class
+com\intersections\excelservice\ExportExcel.class

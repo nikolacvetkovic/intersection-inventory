@@ -8,5 +8,5 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
 public class AccessDao extends AbstractDao<Access, Intersection, Access, Pole, Integer>{
-    
+
 }

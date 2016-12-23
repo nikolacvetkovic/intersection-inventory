@@ -44,6 +44,7 @@ public class InsertController {
     PedestrianPushButtonDao pedestrianPushButtonDao;
     @Autowired
     PedestrianDisplayDao pedestrianDisplayDao;
+   
     
     
     @RequestMapping(value = "/intersection", method = RequestMethod.GET)
@@ -66,7 +67,7 @@ public class InsertController {
         
         Intersection i = new Intersection();
         if(pdf!=null&&!pdf.isEmpty()) {
-            String filePath = request.getServletContext().getRealPath("assets/pdf");
+            String filePath = request.getServletContext().getRealPath("pdf");
             FileOutputStream fos = new FileOutputStream(filePath+"/"+pdf.getOriginalFilename());
             i.setPdf(pdf.getOriginalFilename());
             fos.write(pdf.getBytes());
@@ -104,7 +105,8 @@ public class InsertController {
         model.addAttribute("intersections", intersections);
         
         TrafficSignalController tsc = new TrafficSignalController();
-        tsc.setIntersection(intersectionDao.getById(id));
+        Intersection i = intersectionDao.getById(id);
+        tsc.setIntersection(i);
         tsc.setManufacturer(manufacturer);
         tsc.setModel(modelCon);
         tsc.setYearOfProduction(Integer.parseInt(yearOfProduction));
@@ -197,6 +199,9 @@ public class InsertController {
             ModelMap model){
         String naslov = "Unos detektora";
         model.addAttribute("naslov", naslov);
+        List<Intersection> intersections = intersectionDao.getAll();
+        model.addAttribute("intersections", intersections);
+        
         Intersection i = intersectionDao.getById(idInt);
         Access a = accessDao.getById(idAcc);
         
@@ -238,7 +243,6 @@ public class InsertController {
         a.setSymbol(Integer.parseInt(symbol));
         a.setTitle(title);
         accessDao.insert(a);
-        intersectionDao.getById(id).getAccessList().add(a);
         
         
         return "accessinput";
@@ -392,35 +396,5 @@ public class InsertController {
         
         return "pedestriandisplayinput";
     }
-    @RequestMapping(value = "/search")
-    public String searchPage(ModelMap model){
-        List<Intersection> intersections = intersectionDao.getAll();
-        model.addAttribute("intersections", intersections);
-        
-        return "search";
-    }
-    @RequestMapping(value = "/searchresult")
-    public String search(
-            @RequestParam Integer idInt,
-            ModelMap model){
-        Intersection i = intersectionDao.getById(idInt);
-        model.addAttribute("intersection", i);
-        TrafficSignalController tsc = i.getTrafficSignalController();
-        model.addAttribute("tsc", tsc);
-        List<Access> accesses = i.getAccessList();
-        model.addAttribute("accesses", accesses);
-        List<Detector> detectors = i.getDetectorList();
-        model.addAttribute("detectors", detectors);
-        List<Pole> poles = i.getPoleList();
-        model.addAttribute("poles", poles);
-        List<SignalHead> signalHeads = i.getSignalHeadList();
-        model.addAttribute("signalheads", signalHeads);
-        List<PedestrianPushButton> pedestrianPushButtons = i.getPedestrianPushButtonList();
-        model.addAttribute("pedestrianpushbuttons", pedestrianPushButtons);
-        List<PedestrianDisplay> pedestrianDisplays = i.getPedestrianDisplayList();
-        model.addAttribute("pedestriandisplays", pedestrianDisplays);
-        
-        
-        return "searchresult";
-    }
+    
 }

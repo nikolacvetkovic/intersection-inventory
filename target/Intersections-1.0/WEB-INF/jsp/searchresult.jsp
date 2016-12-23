@@ -12,7 +12,7 @@
                         <h4 class="margin-bottom-20" style="text-align: center;color: black;">Dispozicija</h4>
                         
                         <div id="disposition"></div>
-                        <script>PDFObject.embed("/assets/pdf/${intersection.pdf}", "#disposition");</script>
+                        <script>PDFObject.embed("/pdf/${intersection.pdf}", "#disposition");</script>
                         
                         <h4 class="margin-bottom-20" style="text-align: center;color: black;">Upravljački uređaj</h4>
                         <table>

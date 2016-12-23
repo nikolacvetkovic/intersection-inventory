@@ -105,7 +105,15 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="../use/search"><span class="fa-th ">Pregled</span></a>
+                                    <span class="fa-th ">Pregled</span>
+                                    <ul>
+                                        <li>
+                                            <a href="/use/search">Browser</a>
+                                        </li>
+                                        <li>
+                                            <a href="/use/export">Excel fajl</a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <sec:authorize access="isAnonymous()">

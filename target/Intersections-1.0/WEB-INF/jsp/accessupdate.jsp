@@ -8,7 +8,7 @@
                                     
                                 </div>
                                 <div class="input-group margin-bottom-20">
-                                    Raskrsnica: <select class="form-unos" name="idInt" onchange="if(this.value!=-1) window.location='./access?idInt='+this.value">
+                                    Raskrsnica: <select class="form-unos" name="idInt" onchange="if(this.value!==-1) window.location='./access?idInt='+this.value">
                                         <option value="-1">Odaberi raskrsnicu</option>
                                         <c:forEach items="${intersections}" var="intersection">
                                             <option <c:if test="${intersection.id==selectedIntersection.id}">selected</c:if> value="${intersection.id}">[&nbsp;${intersection.symbol}&nbsp;] &nbsp; ${intersection.title}</option>
@@ -16,10 +16,10 @@
                                                 </select>
                                 </div>
                                 <div class="input-group margin-bottom-20">
-                                    Prilaz: <select class="form-unos" name="idAcc" onchange="if(this.value!=-1) window.location='./access?idAcc='+this.value+'&idInt=${selectedIntersection.id}'">
+                                    Prilaz: <select class="form-unos" name="idAcc" onchange="if(this.value!==-1) window.location='./access?idAcc='+this.value+'&idInt=${selectedIntersection.id}'">
                                         <option value="-1">Odaberi prilaz</option>
                                         <c:forEach items="${accesses}" var="access">
-                                            <option <c:if test="${access.id==selectedAccess.id}">selected</c:if>value="${access.id}">[&nbsp;${access.symbol}&nbsp;] &nbsp; ${access.title}</option>
+                                            <option <c:if test="${access.id==selectedAccess.id}">selected</c:if> value="${access.id}">[&nbsp;${access.symbol}&nbsp;] &nbsp; ${access.title}</option>
                                         </c:forEach>
                                                 </select>
                                 </div>

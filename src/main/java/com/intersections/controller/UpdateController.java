@@ -44,7 +44,7 @@ public class UpdateController {
     @Autowired
     PedestrianDisplayDao pedestrianDisplayDao;
     
-    
+        
     @RequestMapping(value = "/intersection", method = RequestMethod.GET)
     public String intersectionUpdatePage(
             @RequestParam(required = false) Integer idInt,
@@ -76,7 +76,7 @@ public class UpdateController {
         
         Intersection i = intersectionDao.getById(idInt);
         if(pdf!=null&&!pdf.isEmpty()) {
-            String filePath = request.getServletContext().getRealPath("assets/pdf");
+            String filePath = request.getServletContext().getRealPath("pdf");
             FileOutputStream fos = new FileOutputStream(filePath+"/"+pdf.getOriginalFilename());
             i.setPdf(pdf.getOriginalFilename());
             fos.write(pdf.getBytes());
@@ -166,12 +166,18 @@ public class UpdateController {
         List<Intersection> intersections = intersectionDao.getAll();
         model.addAttribute("intersections", intersections);
         
+        
         Intersection i = intersectionDao.getById(idInt);
-        Access a = accessDao.getById(idAccess);
+        Access a = (Access) accessDao.getById(idAccess);
         a.setIntersection(i);
         a.setSymbol(Integer.parseInt(symbol));
         a.setTitle(title);
         accessDao.update(a);
+        System.out.println(a);
+        System.out.println(symbol);
+        System.out.println(title);
+        System.out.println(idAccess);
+        System.out.println(idInt);
         
         return "accessupdate";
     }

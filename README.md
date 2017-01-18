@@ -10,7 +10,7 @@ Goals:
 2. split "insert" and "update" in two separate Controllers (DONE)
 4. implement DAO pattern with Generic classes (DONE)
 5. optimize JSP pages (DONE)
-6. export data to .xslx
-7. add Ajax (checks user input in all forms then sents post request) 
-8. add WebService
+6. export data to .xlsx - Apache POI (DONE)
+7. add Ajax (checks user input in all forms then sends post request) 
+8. add RESTful service
 9. ...

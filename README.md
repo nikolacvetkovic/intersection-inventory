@@ -12,5 +12,5 @@ Goals:
 5. optimize JSP pages (DONE)
 6. export data to .xlsx - Apache POI (DONE)
 7. add Ajax (checks user input in all forms then sends post request) 
-8. add RESTful service
+8. add RESTful service (will be created separately)
 9. ...

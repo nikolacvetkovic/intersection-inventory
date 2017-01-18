@@ -6,7 +6,6 @@ com\intersections\dao\DetectorDao.class
 com\intersections\model\Rank.class
 com\intersections\dao\PedestrianPushButtonDao.class
 com\intersections\model\PedestrianPushButton.class
-com\intersections\rest\RestService.class
 com\intersections\model\User.class
 com\intersections\dao\SignalHeadDao.class
 com\intersections\dao\TrafficSignalControllerDao.class

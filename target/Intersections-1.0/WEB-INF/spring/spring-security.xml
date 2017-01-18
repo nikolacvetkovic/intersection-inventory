@@ -21,10 +21,17 @@
                     default-target-url="/" />
         <logout />
         
+        <session-management>
+            <concurrency-control max-sessions="1" error-if-maximum-exceeded="true" expired-url="/login"/>
+        </session-management>
     </http>
     
+    <beans:bean id="bcryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+    
     <authentication-manager>
-        <authentication-provider user-service-ref="userDao" />
+        <authentication-provider user-service-ref="userDao">
+            <password-encoder ref="bcryptEncoder" />
+        </authentication-provider>
     </authentication-manager>
     
 </beans:beans>

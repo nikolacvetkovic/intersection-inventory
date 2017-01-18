@@ -45,7 +45,6 @@
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</prop>
                 <!--<prop>   ovde je bio podatak koji je definisao sesiju prilikom pokretanja strane, pa je zbog toga u kontroleru .getCurrentSession, a ne .openSession      -->
-                <prop key="hibernate.show_sql">true</prop>
             </props>
         </property> 
     </bean>
@@ -75,4 +74,5 @@
     <bean id="userDao" class="com.intersections.dao.UserDao" />
     <bean id="exportExcel" class="com.intersections.excelservice.ExportExcel" />
     
+        
 </beans>

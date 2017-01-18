@@ -13,6 +13,7 @@
                         
                         <div id="disposition"></div>
                         <script>PDFObject.embed("/pdf/${intersection.pdf}", "#disposition");</script>
+                        <a target="_blank" href="/pdf/${intersection.pdf}">Prikaži crtež na celoj strani</a>
                         
                         <h4 class="margin-bottom-20" style="text-align: center;color: black;">Upravljački uređaj</h4>
                         <table>

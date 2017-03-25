@@ -173,11 +173,6 @@ public class UpdateController {
         a.setSymbol(Integer.parseInt(symbol));
         a.setTitle(title);
         accessDao.update(a);
-        System.out.println(a);
-        System.out.println(symbol);
-        System.out.println(title);
-        System.out.println(idAccess);
-        System.out.println(idInt);
         
         return "accessupdate";
     }

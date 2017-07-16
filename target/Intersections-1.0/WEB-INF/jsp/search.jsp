@@ -1,15 +1,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@include file="topsearch.jsp" %>
-        <!-- === BEGIN CONTENT === -->
-        <div id="content">
-            <div class="container background-white">
-                <div class="container">
-                    <div class="row margin-vert-30">
-                        <!-- Result Box -->
+<%@include file="topNoScroll.jsp" %>
+<%@include file="sideMenu.jsp" %>
+                        
                             <form class="login-page" action="searchresult" method="post">
                                 <div class="login-header margin-bottom-30">
-                                    
                                 </div>
                                 <div class="input-group margin-bottom-20">
                                     Raskrsnica: <select class="form-unos" name="idInt">
@@ -19,7 +14,6 @@
                                         </c:forEach>
                                                 </select>
                                 </div>
-                                
                                 <div class="row">
                                     <div class="col-md-6">
                                         
@@ -28,13 +22,13 @@
                                         <input class="btn btn-primary pull-right" type="submit" value="Potvrdi"/>
                                     </div>
                                 </div>
-                                
+                                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                             </form>
-                        
-                        <!-- End Login Box -->
+                        <!-- End Main Content -->
                     </div>
+                    <!-- End Main Column -->
                 </div>
             </div>
         </div>
         <!-- === END CONTENT === -->
-        <%@include file="bottom1.jsp" %>
+        <%@include file="bottom.jsp" %>

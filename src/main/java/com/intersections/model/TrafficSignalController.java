@@ -38,7 +38,7 @@ public class TrafficSignalController implements Serializable {
     @Column(name = "yearofproduction")
     private Integer yearOfProduction;
     @JoinColumn(name = "id", referencedColumnName = "id", insertable = false, updatable = false)
-    @OneToOne(optional = false, cascade = CascadeType.ALL)
+    @OneToOne(optional = false)
     private Intersection intersection;
 
     public TrafficSignalController() {

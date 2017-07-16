@@ -7,18 +7,17 @@
                     <div class="col-md-6 margin-bottom-30">
                         <ul class="menu">
                             <li>
-                                <a href="" >Raskrsnice</a>
+                                <a href="#" >Raskrsnice</a>
                             </li>
                             <li>
-                                <a href="" >Upravljačke jedinice</a>
+                                <a href="#" >Upravljačke jedinice</a>
                             </li>
                             <li>
-                                <a href="" >Detektori</a>
+                                <a href="#" >Detektori</a>
                             </li>
                             <li>
-                                <a href="" >Stubovi</a>
+                                <a href="#" >Stubovi</a>
                             </li>
-                            
                         </ul>
                         <div class="clearfix"></div>
                     </div>
@@ -27,13 +26,13 @@
                     <div class="col-sm-6 col-md-3 margin-bottom-30">
                         <ul class="menu">
                             <li>
-                                <a href="" >Lanterne</a>
+                                <a href="#" >Lanterne</a>
                             </li>
                             <li>
-                                <a href="" >Pešački displeji</a>
+                                <a href="#" >Pešački displeji</a>
                             </li>
                             <li>
-                                <a href="" >Pešački tasteri</a>
+                                <a href="#" >Pešački tasteri</a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -57,10 +56,10 @@
                     <div id="footermenu" class="col-md-8">
                         <ul class="list-unstyled list-inline">
                             <li>
-                                <a href="/Intersections/" >Početna</a>
+                                <a href="/" >Početna</a>
                             </li>
                             <li>
-                                <a href="search" >Pretraga</a>
+                                <a href="#" >Pretraga</a>
                             </li>
                         </ul>
                     </div>
@@ -73,7 +72,25 @@
                 </div>
             </div>
             <!-- End Footer -->
-            
+            <!-- JS -->
+            <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+            <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="/assets/js/scripts.js"></script>
+            <!-- Isotope - Portfolio Sorting -->
+            <script type="text/javascript" src="/assets/js/jquery.isotope.js"></script>
+            <!-- Mobile Menu - Slicknav -->
+            <script type="text/javascript" src="/assets/js/jquery.slicknav.js"></script>
+            <!-- Animate on Scroll-->
+            <script type="text/javascript" src="/assets/js/jquery.visible.js" charset="utf-8"></script>
+            <!-- Stellar Parallax -->
+            <script type="text/javascript" src="/assets/js/jquery.stellar.js" charset="utf-8"></script>
+            <!-- Sticky Div -->
+            <script type="text/javascript" src="/assets/js/jquery.sticky.js" charset="utf-8"></script>
+            <!-- Slimbox2-->
+            <script type="text/javascript" src="/assets/js/slimbox2.js" charset="utf-8"></script>
+            <!-- Modernizr -->
+            <script  type="text/javascript" src="/assets/js/modernizr.custom.js"></script>
+            <!-- End JS -->
     </body>
 </html>
 <!-- === END FOOTER === -->

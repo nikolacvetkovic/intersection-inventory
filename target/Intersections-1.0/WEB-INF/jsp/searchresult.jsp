@@ -1,8 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@include file="topsearch.jsp" %>
+<%@include file="topNoScroll.jsp" %>
         <!-- === BEGIN CONTENT === -->
-        <script src="assets/js/pdfobject.js" type="text/javascript"></script>
+        <script src="/assets/js/pdfobject.js" type="text/javascript"></script>
         <div id="content">
             <div class="container background-white">
                 <div class="container">
@@ -12,7 +12,8 @@
                         <h4 class="margin-bottom-20" style="text-align: center;color: black;">Dispozicija</h4>
                         
                         <div id="disposition"></div>
-                        <script>PDFObject.embed("assets/pdf/${intersection.pdf}", "#disposition");</script>
+                        <script>PDFObject.embed("/pdf/${intersection.pdf}", "#disposition");</script>
+                        <a target="_blank" href="/pdf/${intersection.pdf}">Prikaži crtež na celoj strani</a>
                         
                         <h4 class="margin-bottom-20" style="text-align: center;color: black;">Upravljački uređaj</h4>
                         <table>
@@ -113,4 +114,4 @@
             </div>
         </div>
         <!-- === END CONTENT === -->
-        <%@include file="bottom1.jsp" %>
+        <%@include file="bottom.jsp" %>

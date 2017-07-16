@@ -7,7 +7,6 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -35,7 +34,6 @@ public class Intersection implements Serializable {
     @Size(max = 256)
     @Column(name = "title")
     private String title;
-    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "xcoordinate")
     private BigDecimal xcoordinate;
     @Column(name = "ycoordinate")
@@ -51,7 +49,7 @@ public class Intersection implements Serializable {
     private List<Detector> detectorList;
     @OneToMany(mappedBy = "intersection")
     private List<PedestrianDisplay> pedestrianDisplayList;
-    @OneToMany(mappedBy = "intersection",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "intersection",cascade = CascadeType.ALL)
     private List<Access> accessList;
     @OneToMany(mappedBy = "intersection")
     private List<SignalHead> signalHeadList;

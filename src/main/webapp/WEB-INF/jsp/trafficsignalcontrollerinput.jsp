@@ -1,8 +1,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@include file="topinput.jsp" %>
+<%@include file="topNoScroll.jsp" %>
+<%@include file="sideMenu.jsp" %>
                     
-                            <form class="login-page" action="trafficsignalcontrollerinput" method="post">
+                            <form class="login-page" action="trafficsignalcontroller" method="post">
                                 <div class="login-header margin-bottom-30">
                                     
                                 </div>
@@ -32,7 +33,7 @@
                                         <input class="btn btn-primary pull-right" type="submit" value="Unesi"/>
                                     </div>
                                 </div>
-                                
+                                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                             </form>
                         <!-- End Main Content -->
                     </div>
@@ -41,4 +42,4 @@
             </div>
         </div>
         <!-- === END CONTENT === -->
-        <%@include file="bottominput.jsp" %>
+        <%@include file="bottom.jsp" %>

@@ -1,7 +1,8 @@
-<%@include file="topinput.jsp" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="topNoScroll.jsp" %>
+<%@include file="sideMenu.jsp" %>
 
-                            <form class="login-page" action="intersectioninput" method="post" enctype="multipart/form-data">
+                            <form class="login-page" action="intersection" method="post" enctype="multipart/form-data">
                                 <div class="login-header margin-bottom-30">
                                     
                                 </div>
@@ -20,7 +21,6 @@
                                 <div>
                                     Dispozicija: <input type="file" name="pdf"/>
                                 </div>
-                               
                                 <div class="row">
                                     <div class="col-md-6">
                                         
@@ -29,9 +29,8 @@
                                         <input class="btn btn-primary pull-right" type="submit" value="Unesi"/>
                                     </div>
                                 </div>
-                                
+                                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                             </form>
-                        
                         <!-- End Main Content -->
                     </div>
                     <!-- End Main Column -->
@@ -39,4 +38,4 @@
             </div>
         </div>
         <!-- === END CONTENT === -->
-        <%@include file="bottominput.jsp" %>
+        <%@include file="bottom.jsp" %>

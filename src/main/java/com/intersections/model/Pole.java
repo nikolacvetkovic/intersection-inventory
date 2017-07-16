@@ -33,7 +33,6 @@ public class Pole implements Serializable {
     @Size(max = 10)
     @Column(name = "symbol")
     private String symbol;
-    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "xcoordinate")
     private BigDecimal xcoordinate;
     @Column(name = "ycoordinate")

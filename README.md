@@ -1,4 +1,4 @@
-Web app for management of data of intersections equipped with traffic lights
+Web app for management data of intersections equipped with traffic lights
 
 My work is Java with Spring MVC, Hibernate and MySQL
 
@@ -11,6 +11,4 @@ Goals:
 4. implement DAO pattern with Generic classes (DONE)
 5. optimize JSP pages (DONE)
 6. export data to .xlsx - Apache POI (DONE)
-7. add Ajax (checks user input in all forms then sends post request) 
-8. add RESTful service (will be created separately)
-9. ...
+7. add Ajax (checks user input in all forms then sends post request) (Transfer to branch: Move from XML to Java Config)

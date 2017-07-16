@@ -1,5 +1,8 @@
 package com.intersections.dao;
 
+import com.intersections.model.Access;
+import com.intersections.model.Intersection;
+import com.intersections.model.Pole;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
@@ -10,7 +13,7 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public abstract class AbstractDao<T, I, A, P, ID extends Serializable> implements DaoInterface<T, I, A, P, ID>{
+public abstract class AbstractDao<T, ID extends Serializable> implements DaoInterface<T, ID>{
     
     @Autowired
     private SessionFactory sessionFactory;
@@ -39,7 +42,7 @@ public abstract class AbstractDao<T, I, A, P, ID extends Serializable> implement
     }
 
     @Override
-    public List<T> getByIntersection(I i) {
+    public List<T> getByIntersection(Intersection i) {
         Session session = sessionFactory.getCurrentSession();
         Criteria c = session.createCriteria(classType);
         c.add(Restrictions.eq("intersection", i));
@@ -49,7 +52,7 @@ public abstract class AbstractDao<T, I, A, P, ID extends Serializable> implement
     }
 
     @Override
-    public List<T> getByAccess(A a) {
+    public List<T> getByAccess(Access a) {
         Session session = sessionFactory.getCurrentSession();
         Criteria c = session.createCriteria(classType);
         c.add(Restrictions.eq("access", a));
@@ -59,7 +62,7 @@ public abstract class AbstractDao<T, I, A, P, ID extends Serializable> implement
     }
 
     @Override
-    public List<T> getByPole(P p) {
+    public List<T> getByPole(Pole p) {
         Session session = sessionFactory.getCurrentSession();
         Criteria c = session.createCriteria(classType);
         c.add(Restrictions.eq("pole", p));

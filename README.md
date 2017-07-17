@@ -6,7 +6,7 @@ Web app for management data of intersections equipped with traffic lights
 Main goals:
 1. change from XML config to Java config
 2. ...
-Other goals:
 
+Other goals:
 1. add Ajax (improve user experience)
 2. add Ajax (checks user input in all forms then sends post request)

@@ -9,8 +9,8 @@
     
     <http pattern="/assets/**" security="none" />
     
-    <http auto-config="true">
-        <access-denied-handler error-page="/403"/>
+    <http create-session="always" auto-config="true">
+        <!--<access-denied-handler error-page="/403"/>-->
         <intercept-url pattern="/login" access="permitAll()"/>
         <intercept-url pattern="/" access="permitAll()"/>
         <intercept-url pattern="/pdf/**" access="hasRole('USER')"/>

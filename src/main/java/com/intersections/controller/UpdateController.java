@@ -76,8 +76,8 @@ public class UpdateController {
         
         Intersection i = intersectionDao.getById(idInt);
         if(pdf!=null&&!pdf.isEmpty()) {
-            String filePath = request.getServletContext().getRealPath("pdf");
-            FileOutputStream fos = new FileOutputStream(filePath+"/"+pdf.getOriginalFilename());
+            String filePath = request.getServletContext().getRealPath("assets");
+            FileOutputStream fos = new FileOutputStream(filePath+"/pdf/"+pdf.getOriginalFilename());
             i.setPdf(pdf.getOriginalFilename());
             fos.write(pdf.getBytes());
             fos.close();

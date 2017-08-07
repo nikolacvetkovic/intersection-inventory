@@ -1,6 +1,5 @@
 package com.intersections.dao;
 
-import com.intersections.model.User;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import org.hibernate.Criteria;

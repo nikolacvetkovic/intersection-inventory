@@ -86,7 +86,6 @@ public class UpdateController {
         i.setTitle(title);
         i.setXcoordinate(new BigDecimal(xCoordinate));
         i.setYcoordinate(new BigDecimal(yCoordinate));
-        i.setPdf(pdf.getOriginalFilename());
         intersectionDao.update(i);
         
         return "intersectionupdate";

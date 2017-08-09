@@ -77,7 +77,6 @@ public class InsertController {
         i.setTitle(title);
         i.setXcoordinate(new BigDecimal(xCoordinate));
         i.setYcoordinate(new BigDecimal(yCoordinate));
-        i.setPdf(pdf.getOriginalFilename());
         intersectionDao.insert(i);
         
         return "intersectioninput";

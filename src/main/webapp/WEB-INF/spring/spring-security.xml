@@ -7,11 +7,11 @@
                                     http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd" >
 
     
-    <http pattern="/assets/**" security="none" />
+    <!--<http pattern="/assets/**" security="none" />-->
     
-    <http create-session="always" auto-config="true">
+    <!--<http create-session="always" auto-config="true">-->
         <!--<access-denied-handler error-page="/403"/>-->
-        <intercept-url pattern="/login" access="permitAll()"/>
+<!--        <intercept-url pattern="/login" access="permitAll()"/>
         <intercept-url pattern="/" access="permitAll()"/>
         <intercept-url pattern="/pdf/**" access="hasRole('USER')"/>
         <intercept-url pattern="/use/**" access="hasRole('USER')"/>
@@ -19,19 +19,19 @@
         <intercept-url pattern="/update/**" access="hasRole('FULLUSER')"/>
         <form-login login-page="/login"
                     default-target-url="/" />
-        <logout />
+        <logout />-->
         
-        <session-management>
+<!--        <session-management>
             <concurrency-control max-sessions="1" error-if-maximum-exceeded="true" expired-url="/login"/>
-        </session-management>
-    </http>
+        </session-management>-->
+    <!--</http>-->
     
-    <beans:bean id="bcryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
-    
-    <authentication-manager>
+    <!--<beans:bean id="bcryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />-->
+                                                
+<!--    <authentication-manager>
         <authentication-provider user-service-ref="userDao">
             <password-encoder ref="bcryptEncoder" />
         </authentication-provider>
-    </authentication-manager>
+    </authentication-manager>-->
     
 </beans:beans>

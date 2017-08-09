@@ -12,8 +12,8 @@ import org.springframework.context.annotation.ImportResource;
  * @author Cvele
  */
 @Configuration
-@ComponentScan(basePackageClasses = {IntersectionDao.class, ExportExcel.class, Intersection.class})
-@ImportResource(locations = {"/WEB-INF/spring/database.xml", "/WEB-INF/spring/spring-security.xml"})
+@ComponentScan(basePackageClasses = {IntersectionDao.class, ExportExcel.class, Intersection.class, WebConfig.class})
+@ImportResource(locations = "/WEB-INF/spring/database.xml")
 public class RootConfig {
     
 }

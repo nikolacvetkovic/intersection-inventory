@@ -28,7 +28,7 @@ public class IntersectionsWebAppInitializer extends AbstractAnnotationConfigDisp
     @Override
     protected void customizeRegistration(ServletRegistration.Dynamic registration) {
         registration.setLoadOnStartup(1);
-        registration.setMultipartConfig(new MultipartConfigElement(DEFAULT_SERVLET_NAME, 10485760, 20971520, 5242880));
+        registration.setMultipartConfig(new MultipartConfigElement("D:/", 10485760, 20971520, 5242880));
     }
     
     

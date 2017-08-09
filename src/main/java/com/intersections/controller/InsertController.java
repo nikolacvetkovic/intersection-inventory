@@ -9,6 +9,7 @@ import com.intersections.dao.DetectorDao;
 import com.intersections.dao.PedestrianDisplayDao;
 import com.intersections.dao.SignalHeadDao;
 import com.intersections.model.*;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -67,11 +68,9 @@ public class InsertController {
         
         Intersection i = new Intersection();
         if(pdf!=null&&!pdf.isEmpty()) {
-            String filePath = request.getServletContext().getRealPath("assets");
-            FileOutputStream fos = new FileOutputStream(filePath+"/pdf/"+pdf.getOriginalFilename());
             i.setPdf(pdf.getOriginalFilename());
-            fos.write(pdf.getBytes());
-            fos.close();
+            //need path from config file
+            pdf.transferTo(new File(pdf.getOriginalFilename()));
         }
         
         i.setSymbol(Integer.parseInt(symbol));

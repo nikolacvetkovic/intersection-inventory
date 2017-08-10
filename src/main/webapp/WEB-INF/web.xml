@@ -5,30 +5,30 @@
 	 version="3.1">
     
     <!-- Context -->
-    <context-param>
+<!--    <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
             /WEB-INF/spring/applicationContext.xml,
             /WEB-INF/spring/database.xml,
             /WEB-INF/spring/spring-security.xml
         </param-value>
-    </context-param>
+    </context-param>-->
     
     <!-- Listeners -->
-    <listener>
+<!--    <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
+    </listener>-->
     
     <listener>
         <listener-class>org.springframework.security.web.session.HttpSessionEventPublisher</listener-class>
     </listener>
     
     <!-- Dispatcher Servlet -->
-    <servlet>
+<!--    <servlet>
         <servlet-name>dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
-            <param-name> </param-name>
+            <param-name>contextConfigLocation</param-name>
             <param-value>/WEB-INF/spring/dispatcher-servlet.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
@@ -42,10 +42,10 @@
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
     
     <!-- Filters -->
-    <filter>
+<!--    <filter>
         <filter-name>springSecurityFilterChain</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
     </filter>
@@ -53,9 +53,9 @@
     <filter-mapping>
         <filter-name>springSecurityFilterChain</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping>-->
     
-    <filter>
+<!--    <filter>
         <filter-name>MultipartFilter</filter-name>
         <filter-class>org.springframework.web.multipart.support.MultipartFilter</filter-class>
     </filter>
@@ -63,7 +63,7 @@
     <filter-mapping>
         <filter-name>MultipartFilter</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping>-->
     
     <filter>
      <filter-name>hibernateFilter</filter-name>

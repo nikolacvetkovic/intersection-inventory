@@ -11,42 +11,7 @@
                            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
 
     
-<!--    <bean id="propertyConfigurer"
-          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
-          p:location="/WEB-INF/jdbc.properties" />
-
-    <bean id="dataSource"
-        class="org.springframework.jdbc.datasource.DriverManagerDataSource"
-        p:driverClassName="${jdbc.driverClassName}"
-        p:url="${jdbc.url}"
-        p:username="${jdbc.username}"
-        p:password="${jdbc.password}" />
-
-    
-    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-        <property name="dataSource" ref="dataSource" /> 
-        <property name="annotatedClasses">
-        <list>
-            <value>com.intersections.model.Intersection</value>
-            <value>com.intersections.model.Access</value>
-            <value>com.intersections.model.Pole</value>
-            <value>com.intersections.model.TrafficSignalController</value>
-            <value>com.intersections.model.Detector</value>
-            <value>com.intersections.model.SignalHead</value>
-            <value>com.intersections.model.PedestrianPushButton</value>
-            <value>com.intersections.model.PedestrianDisplay</value>
-            <value>com.intersections.model.User</value>
-            <value>com.intersections.model.Rank</value>
-       </list>
-        </property>
-        <property name="hibernateProperties">
-            <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</prop>
-                <prop>   ovde je bio podatak koji je definisao sesiju prilikom pokretanja strane, pa je zbog toga u kontroleru .getCurrentSession, a ne .openSession      
-            </props>
-        </property> 
-    </bean>
-    
+<!--    
     <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>-->
@@ -65,17 +30,4 @@
         <aop:advisor advice-ref="txAdvice" pointcut-ref="allDaoMethods"/>
     </aop:config>-->
     
-<!--    <bean id="accessDao" class="com.intersections.dao.AccessDao" />
-    <bean id="detectorDao" class="com.intersections.dao.DetectorDao"/>
-    <bean id="intersectionDao" class="com.intersections.dao.IntersectionDao" />
-    <bean id="pedestrianDisplayDao" class="com.intersections.dao.PedestrianDisplayDao"/>
-    <bean id="pedestrianPushButtonDao" class="com.intersections.dao.PedestrianPushButtonDao"/>
-    <bean id="poleDao" class="com.intersections.dao.PoleDao"/>
-    <bean id="signalHeadDao" class="com.intersections.dao.SignalHeadDao"/>
-    <bean id="trafficSignalControllerDao" class="com.intersections.dao.TrafficSignalControllerDao"/>-->
-    
-    <!--<bean id="userDao" class="com.intersections.dao.UserDao" />-->
-    <!--<bean id="exportExcel" class="com.intersections.excelservice.ExportExcel" />-->
-    
-        
 </beans>

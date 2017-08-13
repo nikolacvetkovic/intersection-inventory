@@ -19,9 +19,9 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>-->
     
-    <listener>
+<!--    <listener>
         <listener-class>org.springframework.security.web.session.HttpSessionEventPublisher</listener-class>
-    </listener>
+    </listener>-->
     
     <!-- Dispatcher Servlet -->
 <!--    <servlet>
@@ -65,7 +65,7 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>-->
     
-    <filter>
+<!--    <filter>
      <filter-name>hibernateFilter</filter-name>
      <filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
      <init-param>
@@ -77,12 +77,12 @@
     <filter-mapping>
      <filter-name>hibernateFilter</filter-name>
      <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping>-->
     
-    <session-config>
+<!--    <session-config>
         <session-timeout>
             30
         </session-timeout>
-    </session-config>
+    </session-config>-->
     
 </web-app>

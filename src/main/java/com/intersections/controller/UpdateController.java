@@ -11,7 +11,6 @@ import com.intersections.dao.SignalHeadDao;
 import com.intersections.model.*;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.List;
@@ -78,7 +77,6 @@ public class UpdateController {
         Intersection i = intersectionDao.getById(idInt);
         if(pdf!=null&&!pdf.isEmpty()) {
             i.setPdf(pdf.getOriginalFilename());
-            //need path from config file
             pdf.transferTo(new File(pdf.getOriginalFilename()));
         }
         

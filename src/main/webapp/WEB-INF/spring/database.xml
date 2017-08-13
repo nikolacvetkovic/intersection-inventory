@@ -7,10 +7,11 @@
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
-                           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+                           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
 
     
-    <bean id="propertyConfigurer"
+<!--    <bean id="propertyConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
           p:location="/WEB-INF/jdbc.properties" />
 
@@ -41,23 +42,28 @@
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</prop>
-                <!--<prop>   ovde je bio podatak koji je definisao sesiju prilikom pokretanja strane, pa je zbog toga u kontroleru .getCurrentSession, a ne .openSession      -->
+                <prop>   ovde je bio podatak koji je definisao sesiju prilikom pokretanja strane, pa je zbog toga u kontroleru .getCurrentSession, a ne .openSession      
             </props>
         </property> 
     </bean>
     
     <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
-    </bean>
+    </bean>-->
     
-    <tx:annotation-driven transaction-manager="transactionManager" />
-    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+    <!--<tx:annotation-driven transaction-manager="transactionManager" />-->
+<!--    <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
             <tx:method name="get*" read-only="true" />
             <tx:method name="find*" read-only="true" />
             <tx:method name="*" />
         </tx:attributes>
-    </tx:advice>
+    </tx:advice>-->
+    <!--* com.intersection.dao.AbstractDao+.*(..)-->
+<!--    <aop:config>
+        <aop:pointcut id="allDaoMethods" expression="execution(* com.intersections.dao.AbstractDao+.*(..))" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="allDaoMethods"/>
+    </aop:config>-->
     
 <!--    <bean id="accessDao" class="com.intersections.dao.AccessDao" />
     <bean id="detectorDao" class="com.intersections.dao.DetectorDao"/>

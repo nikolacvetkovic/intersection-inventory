@@ -12,7 +12,7 @@ import org.springframework.web.WebApplicationInitializer;
  * @author Cvele
  */
 public class AdditionalInitializer implements WebApplicationInitializer{
-
+    
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         

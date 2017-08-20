@@ -4,7 +4,7 @@ Web app for management data of intersections equipped with traffic lights
    - All HTML, CSS and JavaScript is from http://www.free-css.com/free-css-templates/page202/boss and I changed them in accordance with the needs
 
 Main goals:
-1. change from XML config to Java config
+1. change from XML config to Java config (DONE)
 2. ...
 
 Other goals:

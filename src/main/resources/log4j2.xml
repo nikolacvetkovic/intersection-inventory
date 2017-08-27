@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration level="info">
+    <Properties>
+        <Property name="logs-archive-path">D:/intersections/archive-logs</Property>
+        <Property name="logs-path">D:/intersections</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <!--<PatternLayout pattern="%highlight{%d [%t] %-5level: %msg%n%throwable}{STYLE=Logback}" />-->
+            <PatternLayout pattern="%5p %d{HH:mm:ss.SSS} %logger{2} line:%L - %msg %rEx%n" />
+        </Console>
+        <RollingFile name="RollingFile" fileName="${logs-path}/intersections-management.log" filePattern="${logs-archive-path}/$${date:yyyy-MM}/intersections-management-%d{dd-MM-yyyy}-%i.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5p %logger{36} - %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="50 MB" />
+            </Policies>
+            <DefaultRolloverStrategy fileIndex="nomax"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+<!--        <Root level="warn">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="File" />
+        </Root>-->
+        <Logger level="debug" name="com.intersections" additivity="false">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="RollingFile" />
+        </Logger>
+    </Loggers>
+</Configuration>

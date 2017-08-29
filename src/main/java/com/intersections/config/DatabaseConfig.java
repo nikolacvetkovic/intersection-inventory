@@ -29,7 +29,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@PropertySources({@PropertySource("/WEB-INF/database.properties")})
+@PropertySources({@PropertySource("classpath:database.properties")})
 //@ImportResource("/WEB-INF/spring/database.xml")
 public class DatabaseConfig {
         

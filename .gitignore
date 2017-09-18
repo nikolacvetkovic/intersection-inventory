@@ -2,3 +2,4 @@
 **/WEB-INF/glassfish-web.xml
 **/nbproject/**
 nb-configuration.xml
+*.iml
